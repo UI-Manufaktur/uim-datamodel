@@ -1,0 +1,26 @@
+{
+    "authors": ["UI Manufaktur Team"],
+    "copyright": "Copyright© 2017 - 2020, UI Manufaktur UG",
+    "description": "A minimal D application.",
+    "license": "proprietary",
+    "name": "uim-datamodel",
+    "targetName": "uim-datamodel",
+    "targetType": "library",
+    "dependencies": {
+        "vibe-d": "~>0.9.0-alpha.3"
+    },
+    "importPaths": [
+        "../uim-core",
+        "../uim-oop",
+        "../uim-json",
+        "../uim-javascript",
+        "./"
+    ],
+    "sourcePaths": [
+        "../uim-core",
+        "../uim-oop",
+        "../uim-json",
+        "../uim-javascript",
+        "./"
+    ]
+}

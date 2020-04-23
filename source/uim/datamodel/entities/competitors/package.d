@@ -1,0 +1,1 @@
+module uim.datamodel.entities.competitors;
