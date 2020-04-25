@@ -57,8 +57,13 @@ import uim.datamodel;
   Json toJSON() {
     return serializeToJson(this);
   }
-  static ToJSClass() {
-    return jsClass("Entity", ["id", "name", "title", "createdAt", "createdBy", "modifiedAt", "modifiedBy", "locked", "lockedAt", "lockedBy", 
-    "deleted", "deletedAt", "deletedBy", "versionId", "currentVersion", "versionAt", "versionBy", "versionNote", "description"]);
+  string[] myFields() { return ["id", "name", "title", "createdAt", "createdBy", "modifiedAt", "modifiedBy", "locked", "lockedAt", "lockedBy", 
+    "deleted", "deletedAt", "deletedBy", "versionId", "currentVersion", "versionAt", "versionBy", "versionNote", "description"]; }
+  string[] fields() { return this.myFields; }
+
+  string js() {
+    return jsClass("Entity", fields);
   }
 }
+
+auto MODEntity() { return new DMODEntity; }

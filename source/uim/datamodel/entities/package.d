@@ -1,5 +1,7 @@
 module uim.datamodel.entities;
 
+import uim.datamodel.entities.mails;
+
 import uim.datamodel.entities.companies;
 import uim.datamodel.entities.competitors;
 import uim.datamodel.entities.customers;

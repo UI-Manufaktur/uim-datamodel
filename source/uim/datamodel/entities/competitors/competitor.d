@@ -1,4 +1,4 @@
-module uim.datamodel.entities.Competitory.Competitor;
+module uim.datamodel.entities.competitors.competitor;
 
 import uim.datamodel;
 
