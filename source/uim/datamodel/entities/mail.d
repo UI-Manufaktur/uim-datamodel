@@ -8,7 +8,9 @@ import uim.datamodel;
   override string[] myFields() { return ["subject"]; }
   override string[] fields() { return super.fields~this.myFields; }
   override string js() {
-    return jsClassExtends("Entity", "Mail", super.fields, this.fields);
+    return jsClassExtends("Entity", "Mail", super.fields, this.fields, 
+    jsFunc("toJSON", 
+    "var result = super();"));
   }
 }
 auto MODMail() { return new DMODMail; }

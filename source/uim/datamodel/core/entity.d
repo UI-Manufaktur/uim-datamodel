@@ -62,7 +62,13 @@ import uim.datamodel;
   string[] fields() { return this.myFields; }
 
   string js() {
-    return jsClass("Entity", fields);
+    return jsClass("Entity", fields, 
+      jsFunc("toJSON", "return {%s};".format({
+        string result;
+        foreach(field; fields) result ~= "this.%s=%s;".format(field, field);
+        return result;
+      }))
+    );
   }
 }
 
